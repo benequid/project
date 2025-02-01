@@ -25,7 +25,7 @@ const router = createRouter({
     {
       path: '/news/create',
       component: CreateNews,
-      beforeEnter: (to, from, next) => {
+      beforeEnter: (_to, _from, next) => {
         if (!useAuthStore().currentUser) {
           next('/news');
         } else {
@@ -36,7 +36,7 @@ const router = createRouter({
     {
       path: '/guides/create',
       component: CreateGuide,
-      beforeEnter: (to, from, next) => {
+      beforeEnter: (_to, _from, next) => {
         if (!useAuthStore().currentUser) {
           next('/guides');
         } else {
